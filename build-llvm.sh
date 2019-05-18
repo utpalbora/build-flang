@@ -2,12 +2,13 @@
 
 . setup.sh
 
-if [[ ! -d llvm ]]; then
-  git clone https://github.com/flang-compiler/llvm.git
+export FLANG_BASE=${1:-`pwd`}
+if [[ ! -d ${FLANG_BASE}/llvm ]]; then
+  git clone https://github.com/flang-compiler/llvm.git ${FLANG_BASE}/llvm
 fi
-(cd llvm && git checkout release_70)
+(cd ${FLANG_BASE}/llvm && git checkout release_70)
 
-cd llvm
+cd ${FLANG_BASE}/llvm
 
 # Use local GCC to bootstrap LLVM
 mkdir -p build && cd build
