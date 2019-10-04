@@ -5,6 +5,8 @@
 export FLANG_BASE=${1:-`pwd`}
 if [[ ! -d ${FLANG_BASE}/openmp ]]; then
   git clone https://github.com/llvm-mirror/openmp.git ${FLANG_BASE}/openmp
+else
+  cd ${FLANG_BASE}/openmp && git pull
 fi
 (cd ${FLANG_BASE}/openmp && git checkout release_70)
 

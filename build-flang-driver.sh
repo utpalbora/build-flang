@@ -5,6 +5,8 @@
 export FLANG_BASE=${1:-`pwd`}
 if [[ ! -d ${FLANG_BASE}/flang-driver ]]; then
   git clone https://github.com/flang-compiler/flang-driver.git ${FLANG_BASE}/flang-driver
+else
+  cd ${FLANG_BASE}/flang-driver && git pull
 fi
 (cd ${FLANG_BASE}/flang-driver && git checkout release_70)
 
