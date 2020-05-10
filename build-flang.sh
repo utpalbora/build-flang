@@ -8,7 +8,6 @@ if [[ ! -d ${FLANG_BASE}/flang ]]; then
 else
   cd ${FLANG_BASE}/flang && git pull
 fi
-(cd ${FLANG_BASE}/flang && git pull)
 
 (cd ${FLANG_BASE}/flang/runtime/libpgmath
 mkdir -p build && cd build
