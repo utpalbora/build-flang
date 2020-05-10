@@ -5,6 +5,8 @@
 export FLANG_BASE=${1:-`pwd`}
 if [[ ! -d ${FLANG_BASE}/flang ]]; then
   git clone https://github.com/flang-compiler/flang.git ${FLANG_BASE}/flang
+else
+  cd ${FLANG_BASE}/flang && git pull
 fi
 (cd ${FLANG_BASE}/flang && git pull)
 
