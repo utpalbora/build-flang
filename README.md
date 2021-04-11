@@ -2,9 +2,7 @@
 
 ## Execute the scripts in this order
 
-1.  build-llvm.sh /path/to/flang/root  
-2.  build-flang-driver.sh /path/to/flang/root  
-3.  build-openmp.sh /path/to/flang/root  
+1.  build-llvm-project.sh /path/to/flang/root  
 4.  build-flang.sh /path/to/flang/root  
 
 ## Add to bin and library path
